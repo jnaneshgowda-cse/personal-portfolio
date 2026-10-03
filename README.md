@@ -20,7 +20,7 @@ A responsive personal portfolio website built using HTML and CSS.
 ## Technologies Used
 
 - HTML5
-- CSS3
+- CSS
 - Flexbox
 - CSS Grid
 - Responsive Design
