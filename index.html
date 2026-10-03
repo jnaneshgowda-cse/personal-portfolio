@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f7fa;
+
+    color: #1f2937;
+
+    line-height: 1.6;
+}
+
+
+
+
+nav {
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+}
+
+
+.logo {
+    color: #2563eb;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #1f2937;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+
+
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+
+
+
+.hero {
+    padding:30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.hero-text {
+    max-width: 650px;
+}
+
+
+.hello {
+    color: #2563eb;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+
+    margin: 5px 0;
+}
+
+
+.hero h2 {
+    font-size: 23px;
+
+    color: #4b5563;
+
+    margin-bottom: 20px;
+}
+
+
+.intro {
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+
+
+
+.profile-container {
+    margin-top: 30px;
+}
+
+
+.profile {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+
+    transition: 0.3s;
+}
+
+
+.profile:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+
+.social-links {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.social-links a {
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+.social-links a:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+
+
+
+section {
+    margin: 30px 0;
+}
+
+
+.section-title {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.about-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+
+.about-card p {
+    margin-bottom: 12px;
+}
+
+
+
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(140px, 1fr));
+
+    gap: 20px;
+}
+
+
+.skill-card {
+    background-color: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    color: #2563eb;
+}
+
+
+
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+
+.project-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+
+.project-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.project-links {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.project-links a {
+    text-decoration: none;
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+
+
+.contact-box {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+
+.contact-box label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    outline: none;
+
+    border: 2px solid #2563eb;
+}
+
+
+button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 60px;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        justify-content: center;
+
+        padding: 50px 0;
+    }
+
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+
+    .social-links {
+        justify-content: center;
+    }
+
+
+    .profile {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jnanesh Gowda | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <nav>
+        <div class="nav-container">
+            <h2 class="logo">JG</h2>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <p class="hello">Hello, I'm</p>
+
+                <h1>Jnanesh Gowda</h1>
+
+                <h2>
+                    CSE Student | Aspiring Software Developer
+                </h2>
+
+                <p class="intro">
+                    I am a Computer Science and Engineering student
+                    learning Java, DSA and Web Development.
+                    I enjoy solving coding problems and building projects.
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://github.com/jnaneshgowda-cse"
+                        target="_blank">
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/jnanesh-gowda-a9ab55324"
+                        target="_blank">
+                        LinkedIn
+                    </a>
+
+                   
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jnanesh2k25@gmail.com"
+                      target="_blank">
+                      Email
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="profile-container">
+
+                <img
+                    src="jnanesh photo.png"
+                    alt="Jnanesh Gowda profile photo"
+                    class="profile">
+
+            </div>
+
+        </section>
+
+
+        
+        <section id="about">
+
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-card">
+
+                <p>
+                    I am a Computer Science and Engineering student
+                    interested in software development and problem solving.
+                </p>
+
+                <p>
+                    I am currently improving my programming skills through
+                    Java, DSA, HTML, CSS and other technologies.
+                </p>
+
+                <p>
+                    My goal is to build strong software projects and become
+                    a skilled software developer.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    
+        <section id="skills">
+
+            <h2 class="section-title">My Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">Java</div>
+                <div class="skill-card">DSA</div>
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">C</div>
+
+            </div>
+
+        </section>
+
+
+        
+        <section id="projects">
+
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+
+               <div class="project-card">
+
+    <h3>Student Registration Form</h3>
+
+    <p>
+        A student registration webpage created using
+        HTML forms and CSS.
+    </p>
+
+    <div class="project-links">
+
+        <a href="student-form.html" target="_blank">
+            View Project
+        </a>
+
+        <a href="#">
+            GitHub
+        </a>
+
+    </div>
+
+</div>
+
+
+                <div class="project-card">
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A responsive personal portfolio website built
+                        using HTML and CSS.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="#">View Project</a>
+
+                        <a href="#">GitHub</a>
+
+                    </div>
+
+                </div>
+
+
+                
+
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-box">
+
+                <form>
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Enter your message">
+                    </textarea>
+
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Jnanesh Gowda
+        </p>
+
+        <p>
+            Built with HTML & CSS
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
