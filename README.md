@@ -38,4 +38,4 @@ A personal portfolio website showcasing my skills, projects, and social profiles
 **Jnanesh Gowda**
 
 - GitHub: [jnaneshgowda-cse](https://github.com/jnaneshgowda-cse)
-- LinkedIn: Add your LinkedIn profile link here
+- LinkedIn:[Jnanesh Gowda](https://www.linkedin.com/in/jnanesh-gowda-a9ab55324)
